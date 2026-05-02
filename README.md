@@ -1,0 +1,1 @@
+Raw read QC (FastQC) → trimming and filtering (fastp) → post-trimming QC → contamination screening (Kraken2) → rRNA removal (SortMeRNA) → genome alignment (Bowtie2 + samtools) → strandedness inference (RSeQC) → gene-level quantification (featureCounts) for downstream differential expression analysis.
