@@ -77,8 +77,8 @@ do
     BASENAME=$(basename $r1 _R1_trimmed.fastq.gz)
     r2=${WORKDIR}/results/fastp/${BASENAME}_R2_trimmed.fastq.gz
 
-    rm -rf /path_to/sortmerna_index/idx/kvdb/*
-    rm -rf /path_to/alka/kumar/academic/sortmerna_index/idx/readb/*
+    rm -rf /path_to/sortmerna_index/idx/kvdb/* 2>/dev/null || true
+    rm -rf /path_to/sortmerna_index/idx/readb/* 2>/dev/null || true
 
     $SORTMERNA \
         --ref ${SORTMERNA_DB_DIR}/rfam-5s-database-id98.fasta \
